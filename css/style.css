@@ -1,0 +1,263 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700&display=swap');
+:root {
+    /* project Colors */
+    --main-color: #333;
+    --yellow: #ffc800;
+    --pink: #ffb2bf;
+    /*old colors*/
+    --black: #111;
+    --text-c: #555c66;
+    --bg-footer: #333;
+    --light-text: #b3b3b3;
+    --main-bg: #f2f2f2;/* icon bg */
+    --blue: #2162e3;
+    --shadow: rgb(0 0 0 / 20%);
+    --input-border: #d9d9d9;
+}
+/* global rules */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+ul {
+    margin: 0;
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #fff;
+}
+@media (min-width: 922px) {
+    .container {
+        margin-left: 100px !important;
+        margin-right: 100px !important;
+    }
+}
+.container {
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+/* start header */
+header {
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 111;
+    height: 74px;
+}
+header form input {
+    border: 1px solid var(--input-border);
+}
+header form input::placeholder {
+    color: var(--input-border);
+}
+header form i {
+    top: 50%;
+    transform: translateY(-50%);
+    right: 15px;
+}
+@media (max-width: 767px) {
+    header nav {
+        display: none;
+        position: absolute;
+        top: 74px;
+        left: 0;
+        width: 100%;
+        background-color: var(--bg-footer);
+        padding: 30px;
+    }
+    header nav ul {
+        flex-direction: column;
+    }
+    header nav ul li {
+        flex-basis: 100%;
+    }
+    header nav ul li a {
+        color: white !important;
+    }
+    header nav .close {
+        display: block !important;
+        top: 20px;
+        right: 20px;
+    }
+}
+
+header nav ul li a {
+    color: var(--footer-bg);
+}
+header nav ul li a:hover {
+    opacity: .75;
+}
+header nav .close {
+    color: white;
+    display: none;
+}
+@media (max-width: 767px) {
+    header .open {
+        display: block !important;
+    }
+}
+header .open {
+    display: none;
+}
+/* end header */
+/* start landing */
+@media (max-width: 767px) {
+    .landing {
+        height: auto !important;
+    }
+}
+.landing {
+    height: calc(100vh - 74px);
+    background-image: url("../images/portfolio-images/building-07.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.landing::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .3);
+}
+.landing h1,
+.landing p {
+    max-width: 400px;
+}
+.landing .pattern-size {
+    top: 50%;
+    left: 250px;
+    transform: translateY(-50%);
+}
+/* end landing */
+
+/* start about*/
+@media (min-width: 922px) {
+    .about .container .image {
+        width: 350px;
+        align-self: center;
+    }
+}
+/* end about
+
+/* start experiences*/
+@media (max-width: 767px) {
+    .experiences .container .title-sec h2 {
+        margin-top: 0 !important;
+    }
+}
+.experiences .container .title-sec h2 {
+    margin-top: -30px;
+}
+.experiences .container .digits {
+    padding: 60px;
+    background-image: url("../images/gigit-bg.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+.experiences .container .digits::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .3);
+}
+/* end experiences */
+
+/* start memorable  */
+@media (min-width: 768px) {
+    .memorable .container > div {
+        width: calc(50% - 15px);
+    }
+}
+.memorable .container .big-pattern {
+    margin-left: auto;
+}
+/* end memorable  */
+
+/* start favorite-project*/
+.favorite-project .container {
+    background-image: url("../images/portfolio-images/building-01.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.favorite-project .container h2,
+.favorite-project .container p {
+    max-width: 400px;
+    margin-left: auto;
+}
+.favorite-project .container .big-pattern {
+    bottom: -50px;
+    left: 50px;
+}
+/* end favorite-project */
+
+/* start firm */
+@media (min-width: 922px) {
+    .firm .container > div {
+        width: calc(50% - 15px);
+    }
+    .firm .container .image {
+        align-self: center;
+    }
+}
+/* end firm */
+
+/* gallery */
+.gallery {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+/* gallery */
+
+/* contact */
+.contact {
+    background-image: url("../images/portfolio-images/building-06.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.contact::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .5);
+}
+.contact form textarea {
+    height: 150px;
+}
+.contact form .submit:hover {
+    border-color: white;
+    color: white;
+}
+/* contact */
+
+/* start download */
+/* end download */
+
+/* contact */
+/* contact */
+
+/* start footer */
+footer .text {
+    max-width: 500px;
+}
+footer a:hover {
+    color: var(--blue);
+    text-decoration: underline;
+}
+/* end footer */
